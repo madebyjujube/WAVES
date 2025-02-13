@@ -1,0 +1,176 @@
+:root {
+    --ff-body: "Abadi", sans-serif;
+    --ff-heading: "Oswald", sans-serif;
+  
+    --c-primary-400: hsla(360, 100%, 50%);
+    --c-neutral-900: hsla(0, 0%, 0%);
+    --c-neutral-100: hsla(0, 0%, 100%);
+  
+    --fs-xl: 4em;
+    --fs-600: ;
+    --fs-500: ;
+    --fs-400: ;
+  
+    --scrollbarBG: hsla(0, 0%, 0%, 1%);
+    --thumbBG: hsl(190, 10%, 20%);
+    scroll-behavior: smooth;
+  
+    background-color: hsl(360, 0%, 40%);
+  }
+  @media (min-width: 40em) {
+    :root {
+      --fs-xl: 3em;
+      --fs-600: ;
+      --fs-500: ;
+      --fs-400: ;
+    }
+  }
+  
+  /* ===========
+      Scrollbar
+    ============ */
+  body::-webkit-scrollbar {
+    width: 11px;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 10px;
+  }
+  
+  /* ==============
+     global styles
+     ============== */
+  * {
+    cursor: crosshair;
+    user-select: none;
+  }
+  body {
+    font-family: "Oswald", sans-serif;
+    text-align: justify;
+    padding: 5% 0;
+    margin: 0 20%;
+    background: url(TDMovieOut.gif) no-repeat center center;
+    background-size: cover cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+  
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  /*  general */
+  
+  /* Typography */
+  h1 {
+    line-height: 0px;
+    padding: 0;
+    margin-top: 2em;
+    font-size: var(--fs-xl);
+  }
+  .subtitle {
+    line-height: 0px;
+    padding: 0;
+    margin: 0;
+    font-size: 4em;
+  }
+  p {
+    font-size: 2em;
+  }
+  
+  /* HOVER effects TEXT */
+  .container {
+    color: #444A;
+    transition: color ease-in 2s;
+  }
+  .container:hover {
+    color: #000D;
+    transition: color cubic-bezier(0,1,0,.5) 2s;
+  }
+  /* ===LOGO=== */
+  .logo {
+      position: absolute;
+  }
+  .headlogo {
+    margin: 1em;
+    width: 8vw;
+    transition: cubic-bezier(0,1,0,.5) 3s;
+  }
+  .headlogo:hover {
+    filter: invert(90%);
+  }
+  /* Nav section */
+  
+  .button {
+    display: contents;
+    position: absolute;
+  }
+  .button a {
+    width: 3em;
+    height: 3em;
+    text-align: center;
+    pointer-events: auto;
+    color: #444A;
+    font-size: 2em;
+    text-decoration: none;
+    position: absolute;
+    z-index: 3;
+    background-image: radial-gradient(#0003 0%, #0000 50%);
+    transition: cubic-bezier(0,1,0,.5) 3s;
+    transition: all 0.7s ease-in;
+    filter: invert(80%);
+  }
+  .button a:hover {
+    color: #000D;
+    font-size: 2em;
+    transform: rotate(-10deg);
+    transition: all 0.7s ease-out;
+    filter: invert(20%);
+  }
+  
+  /* link position */
+  .link4 {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+  }
+  
+  /* hide selection */
+  ::selection {
+    background: hsla(50, 10%, 10%, 10%);
+  }
+  ::-moz-selection {
+    background: hsla(50, 10%, 10%, 10%);
+  }
+  
+  /* ==============
+    media queries
+    ============== */
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 3em;
+      }
+      .subtitle {
+        font-size: 2.5em;
+      }
+      p {
+        font-size: 1.5em;
+      }
+    }
+    @media only screen and (max-width: 400px) {
+      h1 {
+        margin-top: 3em;
+        font-size: 2.5em;
+      }
+      .subtitle {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
+      body {
+        text-align: left;
+        margin: 0 10%;
+    }
+}
