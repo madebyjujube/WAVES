@@ -1,0 +1,179 @@
+* {
+  cursor: crosshair;
+  user-select: none;
+}
+.pages {
+  color: black; font-size: 2em;
+  width: 100vw; height: 100vh;
+  position: absolute;
+  pointer-events: none;
+  text-decoration: none;
+  z-index: 2;
+}
+.button {
+  display: contents;
+  position: absolute;
+  z-index: 2;
+}
+
+.button a {
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  pointer-events: auto;
+  color: #444A;
+  font-size: 1em;
+  text-decoration: none;
+  position: absolute;
+  z-index: 3;
+  background-image: radial-gradient(#0003 0%, #0000 50%);
+  transition: cubic-bezier(0,1,0,.5) 3s;
+  transition: all 0.7s ease-in;
+  filter: invert(80%);
+}
+.button a:hover {
+  color: #000D;
+  font-size: 1.5em;
+  transform: rotate(10deg);
+  transition: all 0.7s ease-out;
+  filter: invert(20%);
+  width: 12vw;
+}
+/* ===LOGO=== */
+.logo {
+    position: absolute;
+}
+.headlogo {
+  position: fixed;
+  margin-left: 2em;
+  margin-top: 1em;
+  width: 10vw;
+  transition: cubic-bezier(0,1,0,.5) 3s;
+  filter: invert(80%);
+}
+.headlogo:hover {
+  filter: invert(20%);
+  width: 12vw;
+}
+
+.link1 {
+  position: absolute;
+  left: 14vw;
+  top: 20vh;
+}
+.link2 {
+  position: absolute;
+  left: 65vw;
+  top: 22vh;
+}
+.link3 {
+  position: absolute;
+  left: 23vw;
+  top: 60vh;
+}
+.link4 {
+  position: absolute;
+  left: 55vw;
+  top: 80vh;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(360, 0%, 40%);
+  font-family: serif;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+}
+
+/* BACKGROUND HOVERING flex */
+.container {
+  color: hsla(0,0%,0%,3%);
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  font-size: 500%;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.flex-pos {
+  top: 0px;
+  left: 0px;
+  display: inline;
+  position: absolute;
+}
+
+.flex {
+  width: 10%;
+  border-radius: 15%;
+  background-color: #0000;
+  justify-content: center;
+  align-items: center;
+  padding: 1vw;
+  transition: color cubic-bezier(0,1,0,.5) 3s;
+  text-align: center;
+  z-index: 0;
+}
+.flex:hover {
+  color: hsla(0, 0%, 80%);
+}
+
+.line1 {
+  width: 12%;
+}
+
+.container {
+  z-index: 1;
+}
+
+
+/* Book binding with 0s */
+section.binding-left, section.binding-right {
+  font-size: 30px;
+  width: 3px;
+  position: absolute;
+  height: 100%
+}
+
+section.binding-right {
+  left: 1px;
+  top: 100px;
+}
+section.binding-left {
+  left: -6px;
+}
+p {
+  margin-bottom: 170px;
+}
+
+/* hide selection */
+::selection {
+  background: transparent;
+}
+::-moz-selection {
+  background: transparent;
+}
+
+/* ==============
+  media queries
+  ============== */
+  @media only screen and (min-width: 1600px) {
+    .flex {
+      font-size: 2em;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .flex {
+      font-size: 70%;
+      font-size-adjust: auto;
+    }
+  @media only screen and (max-width: 400px) {
+    .flex {
+      font-size: 50%;
+      font-size-adjust: auto;
+    }
